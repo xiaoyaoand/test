@@ -1,0 +1,132 @@
+@import "../base/fn";
+@BtnDefaultGap:12px;
+@BtnBorderWidth:1PX;
+@BtnRadius:@DefaultRadius;
+@BtnBlcokBorderWidth:2PX;
+@BtnDisabledBg:#e0e0e0;
+@BtnDisabledFontColor:fade(@PrimaryGrey,20%);
+@BtnBlockHeight:40px;
+
+
+.btn-default{
+    font-size: @Font5;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: @BtnDefaultGap;
+    padding-right: @BtnDefaultGap;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.btn,.btn-ghost{
+    &.\-block{
+        width: 100%;
+    }
+    &.\-large{
+        font-size: @Font3;
+        height: @BtnBlockHeight;
+    }
+    &.\-rounded{
+        border-radius: @BtnRadius;
+    }
+    .setTapColor();
+}
+
+//默认按钮
+.btn {
+    .btn-default();
+    &.\-default{
+        background-color:@DeepGrey;
+        border-color: @DeepGrey;
+        color:@White;
+        &:active{
+            background-color: darken(@DeepGrey,10%);
+            border-color: darken(@DeepGrey,10%);
+        }
+    }
+    &.\-primary{
+        background-color:@Primary;
+        border-color: @Primary;
+        color: @White;
+        &:active{
+            background-color: darken(@Primary,10%);
+            border-color:darken(@Primary,10%);
+        }
+    }
+    &.\-danger{
+        background-color:@Danger;
+        border-color: @Danger;
+        color: @White;
+        &:active{
+            background-color: darken(@Danger,10%);
+            border-color:darken(@Danger,10%);
+        }
+    }
+    &.\-warn{
+        background-color:@Warn;
+        border-color: @Warn;
+        color: @White;
+        &:active{
+            background-color: darken(@Warn,10%);
+            border-color:darken(@Warn,10%);
+        }
+    }
+    &.\-success{
+        background-color:@Success;
+        border-color: @Success;
+        color: @White;
+        &:active{
+            background-color: darken(@Success,10%);
+            border-color:darken(@Success,10%);
+        }
+    }
+}
+
+//幽灵按钮
+.btn-ghost {
+    .btn-default();
+    &.\-default{
+        background-color:@White;
+        border-color: @DeepGrey;
+        color: @DarkGrey;
+        &:active{
+            background-color: fade(@DeepGrey,20%);
+        }
+    }
+    &.\-primary{
+        background-color:@White;
+        border-color: @Primary;
+        color: @Primary;
+        &:active{
+            background-color: fade(@Primary,20%);
+        }
+    }
+    &.\-danger{
+        background-color:@White;
+        border-color: @Danger;
+        color: @Danger;
+        &:active{
+            background-color: fade(@Danger,20%);
+        }
+    }
+    &.\-warn{
+        background-color:@White;
+        border-color: @Warn;
+        color: @Warn;
+        &:active{
+            background-color: fade(@Warn,20%);
+        }
+    }
+    &.\-success{
+        background-color:@White;
+        border-color: @Success;
+        color: @Success;
+        &:active{
+            background-color: fade(@Success,20%);
+        }
+    }
+}
+
+
+

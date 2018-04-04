@@ -1,0 +1,73 @@
+@import "../base/fn";
+
+@TabBarHeight: 53px;
+@TabBarRadius: 10px;
+@TabBarBg: @BlueGrey;
+@TabBarActiveBg: @White;
+@TabBarColor: @DeepGrey;
+@TabBarActiveColor: @DarkGrey;
+@TabBarItemHeight: @TabBarHeight - 12px;
+@TabBarPrimaryColor: @Primary;
+@TabBarPrimaryActiveColor: @Primary;
+@TabBarPrimaryGap: 16px;
+
+
+.tabbar-default {
+	padding: @Gap12 @Gap15 0;
+	height: @TabBarHeight;
+	background-color: @TabBarBg;
+	color: @TabBarColor;
+	.tabbar-item {
+		flex: 1;
+		font-size: @Font5;
+		border-top-left-radius: @TabBarRadius;
+		border-top-right-radius: @TabBarRadius;
+		height: @TabBarItemHeight;
+		&.active {
+			background-color: @TabBarActiveBg;
+			color: @TabBarActiveColor;
+		}
+	}
+}
+
+.tabbar-primary {
+	height: @NavBarHeight;
+	background-color: @TabBarBg;
+	color: @TabBarColor;
+	.tabbar-item {
+		font-size: @Font5;
+		border-top-left-radius: @TabBarRadius;
+		border-top-right-radius: @TabBarRadius;
+		height: @NavBarHeight;
+		font-size: @Font4;
+		position: relative;
+		a {
+			padding: 0 @TabBarPrimaryGap;
+		}
+		&.active {
+			color: @TabBarPrimaryActiveColor;
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: @TabBarPrimaryGap;
+				right: @TabBarPrimaryGap;
+				height: 2px;
+				background-color: @TabBarPrimaryActiveColor;
+			}
+		}
+	}
+}
+
+.tabbar {
+	display: flex;
+	&-item {
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

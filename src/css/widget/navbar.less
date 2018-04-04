@@ -1,0 +1,172 @@
+@import "../base/fn";
+@NavBarHeight: 44px;
+@NavBarDefaultBg: @BlueGrey;
+@NavBarPrimaryBg: @Primary;
+@NavBarTransparentBg: fade(@Black, 30%);
+@NavBarTitleSize: @Font4;
+@NavBarColor: @PrimaryGrey;
+@NavBarSearchBarWidth: 250px;
+@NavBarSearchBarHeight: 29px;
+@NavBarSearchBarRadius: 5px;
+
+.fixed {
+    position: fixed;
+    left: auto;
+    right: auto;
+    width: 100%;
+    max-width: 750px;
+    z-index: @Zindex1 * 10;
+}
+
+.navbar-wrap {
+    .navbar {
+        .fixed();
+    }
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    height: @NavBarHeight;
+    align-items: center;
+    justify-content: center;
+    font-size: @Font5;
+    .icon-return,
+    .icon-close,
+    .icon-more,
+    .icon-arrow-left {
+        width: 24px;
+        height: 24px;
+    }
+    .icon-return {
+        -webkit-mask-size: 18px auto;
+    }
+    .icon-close {
+        -webkit-mask-size: 17px auto;
+        margin-left: 8px;
+    }
+    .icon-more {
+        -webkit-mask-size: contain;
+    }
+    .icon-arrow-left {
+        -webkit-mask-size: 11px auto;
+        -webkit-mask-position: 4px center;
+    }
+    .icon-setting {
+        width: 23px;
+        height: 23px;
+        margin-right: 10px;
+        -webkit-mask-size: contain;
+    }
+    &-title {
+        font-size: @NavBarTitleSize;
+        font-weight: bold;
+        color: @NavBarColor;
+    }
+    &-left {
+        padding-left: 15px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+    }
+    &-right {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        padding-right: 15px;
+    }
+    &-select {
+        display: flex;
+        align-items: center;
+        .icon-triangle-down {
+            margin-left: 5px;
+            margin-right: 5px;
+            width: 8px;
+            height: 8px;
+        }
+    }
+}
+
+.navbar-searchbar {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: @NavBarSearchBarWidth;
+    height: @NavBarSearchBarHeight;
+    font-size: @Font7;
+    display: flex;
+    border-radius: @NavBarSearchBarRadius;
+    align-items: center;
+    a {
+        flex: 1;
+    }
+    .icon-search {
+        width: 13px;
+        height: 12px;
+        margin-right: 10px;
+    }
+}
+
+.navbar-default {
+    box-shadow: 0px 1px 3px 0px fade(@Black, 10%);
+    background-color: @NavBarDefaultBg;
+    .icon-return,
+    .icon-close,
+    .icon-more,
+    .icon-arrow-left,
+    .icon-triangle-down {
+        background-color: @NavBarColor;
+    }
+    .navbar-searchbar {
+        background-color: @White;
+        color: @DeepGrey;
+        ::-webkit-input-placeholder {
+            color: @DeepGrey;
+        }
+        .icon-search {
+            background-color: @DeepGrey;
+        }
+    }
+}
+
+.navbar-primary {
+    background-color: @NavBarPrimaryBg;
+    color: @White;
+    .icon-more,
+    .icon-setting {
+        background-color: @White;
+    }
+    .user-info {
+        margin-left: 12px;
+        font-size: @Font4;
+    }
+}
+
+.navbar-transparent {
+    background-color: @NavBarTransparentBg;
+    color: @White;
+    .navbar-searchbar {
+        margin-left: 10px;
+        background-color: fade(@White, 10%);
+        color: @White;
+        ::-webkit-input-placeholder {
+            color: @White;
+        }
+        .icon-search {
+            background-color: @White;
+        }
+    }
+    .icon-more,
+    .icon-setting,
+    .icon-triangle-down {
+        background-color: @White;
+    }
+    .user-info {
+        margin-left: 12px;
+    }
+}

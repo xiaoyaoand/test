@@ -1,0 +1,123 @@
+@import "../base/fn";
+@DialogGap: 25px;
+//ios style
+.ios {
+    .dialog {
+        border-radius: @DefaultRadius;
+    }
+    .dialog-hd {
+        text-align: center;
+    }
+    .dialog-ft{
+        &:after {
+            content: '';
+            .setTopLine(@MediumGrey);
+        }
+    }
+    .dialog-btn {
+        &:not(:first-child) {
+            &:after {
+                .setLeftLine(@MediumGrey);
+            }
+        }
+    }
+}
+//public
+.dialog {
+    position: fixed;
+    z-index: @Zindex1 * 1000;
+    width: 80%;
+    max-width: 318px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: .2s;
+    background-color: @White;
+    overflow: hidden;
+    opacity: 0;
+    transform-origin: 0 0;
+    visibility: hidden;
+    box-shadow: 0 0 10px fade(@Black,10%);
+    &-visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.dialog-hd {
+    padding: 20px @DialogGap 10px;
+}
+
+.dialog-title {
+    font-weight: bold;
+    font-size: @Font2;
+    color: @PrimaryGrey;
+}
+
+.dialog-bd {
+    padding: 0 @DialogGap 37px;
+    min-height: 40px;
+    font-size: @Font5;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: @DarkGrey;
+}
+
+.dialog-ft {
+    position: relative;
+    line-height: 48px;
+    font-size: @Font3;
+    display: flex;
+}
+
+.dialog-btn {
+    display: block;
+    flex: 1;
+    color: @DarkGrey;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    &.\default {
+        color: @DarkGrey;
+    }
+    &.\primary {
+        color: @Primary;
+    }
+}
+
+// android style
+.android{
+    .dialog-ft{
+       padding-bottom: 10px;
+    }   
+}
+
+//mask
+.mask {
+    position: fixed;
+    z-index: @Zindex1 * 999;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    transition-duration: .3s;
+}
+
+.mask-transparent {
+    position: fixed;
+    z-index: @Zindex1 * 999;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.mask {
+    opacity: 0;
+    visibility: hidden;
+    &.mask-visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" data-rem="375">
+
+<head>
+	<meta charset="UTF-8">
+	<title>dialog</title>
+	<% include ../block/head.html %>
+</head>
+
+<body>
+	<a href="javascript:;" id="show-custom" class="btn -primary -rounded -large">显示弹窗</a>
+
+	<% include ../block/foot.html %>
+		<script>
+		  $(document).on("click", "#show-custom", function () {
+            $.confirm("您确认要为15002735378办理【300MB国内流量套餐】业务，立即生效", "确认办理", function () {
+                console.log('确定');
+            }, function () {
+                console.log('取消');
+            });
+          });
+		</script>
+</body>
+
+</html>

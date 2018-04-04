@@ -1,0 +1,484 @@
+@import "./base/fn";
+@LineSpacing: 12px;
+
+.Bilateralmargin {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 0;
+}
+
+// banner swiper
+.index-banner {
+    .swiper-slide {
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .swiper-pagination-bullet {
+        background-color: @White;
+        opacity: 0.4;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: @White;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet {
+        width: 16px;
+        height: 2px;
+        border-radius: 0;
+    }
+}
+
+.index-banner>.swiper-pagination-bullets {
+    bottom: 2px;
+}
+
+.gridstyle {
+    a {
+        color: @PrimaryGrey;
+        font-size: @Font5;
+        margin-top: 8px;
+        margin-bottom: 7px;
+    }
+}
+
+.grids-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+}
+
+.grids-label {
+    text-align: center;
+    margin-top: 5px;
+}
+// 
+.news {
+    .Bilateralmargin;
+    margin-bottom: 10px;
+    background-color: @White;
+    border-radius: 3px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    ul li a {
+        color: @PrimaryGrey;
+        font-size: @Font6;
+        width: 100%;
+        .line-overflow(1);
+    }
+    &-icon {
+        width: 34px;
+        margin-right: 6px;
+    }
+}
+// 
+
+
+.surplus-message {
+    background-image: url(../img/01/pic_bg1.jpg);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    background-size: cover;
+    .title {
+        margin-bottom: 10px;
+        text-align: center;
+        color: @DarkGrey;
+        font-size: @Font7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::before {
+            content: "";
+            width: 14px;
+            height: 14px;
+            background-image: url(../slice/01/icon_wifi.png);
+            margin-right: 5px;
+        }
+    }
+}
+
+.user-message {
+    color: @White;
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 13px;
+        background-image: url(../slice/01/icon_potoperson.png);
+        margin-right: 5px;
+        vertical-align: -1px;
+    }
+    
+}
+
+.bg-transparent {
+    background-color: fade(@White,90%);
+    border-radius: @DefaultRadius;
+    padding: 10px;
+  
+}
+
+.surplus-message-grid {
+    padding-bottom: 14px;
+    
+}
+
+.surplus-data {
+    width: 92px;
+    height: 92px;
+    margin: 0 auto;
+    border-radius: 46px;
+    border: 5px solid @Warn;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    p {
+        width: 100%;
+        text-align: center;
+        font-size: @Font1;
+        span {
+            color: #b7b9bc;
+            font-size: @Font6;
+        }
+    }
+    a {
+        width: 52px;
+        margin: 0 auto;
+        border: 1px solid @Warn;
+        color: @Warn;
+        border-radius: 3px;
+    }
+}
+
+.surplus-fare-icon {
+    width: 44px;
+    height: 44px;
+    margin-right: 15px;
+    background-image: url(../slice/01/icon_phonesurplus.png);
+}
+
+.surplus-fare-detail {
+    color: @DarkGrey;
+    font-size: @Font7;
+    flex: 1;
+    p {
+        color: @DeepGrey;
+        font-size: @Font8;
+        em {
+            color: @PrimaryGrey;
+            font-size: @Font4;
+        }
+    }
+}
+
+.bg-transparent+.bg-transparent {
+    margin-top: 15px;
+}
+
+.surplus-converse-icon {
+    width: 44px;
+    height: 44px;
+    margin-right: 15px;
+    background-image: url(../slice/01/icon_conversesurplus.png);
+}
+
+.prefecture {
+    margin-top: @LineSpacing;
+    background-color: @White;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.prefecture-name {
+    position: relative;
+    h2 {
+        display: inline-block;
+        width: 92px;
+        font-size: @Font4;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: @White;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    small {
+        position: absolute;
+        right: 15px;
+        top: 7px;
+        color: @DeepGrey;
+    }
+}
+
+.lineargrident-blue {
+    .gradient( #6cc2ff, #4a8dff);
+}
+
+.lineargrident-red {
+    .gradient( #fe9083, @Danger);
+}
+
+.lineargrident-yellow {
+    .gradient( #fcd382, @Warn);
+}
+
+.lineargrident-green {
+    .gradient(#6de2bc, #14d697)
+}
+
+.prefecture-hot {
+    margin-top: 10px;
+    a {
+        display: block;
+        text-align: center;
+        color: @DeepGrey;
+        font-size: @Font7;
+        img {
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+        }
+        h3 {
+            color: @PrimaryGrey;
+            font-size: @Font5;
+        }
+    }
+}
+
+.prefecture-flow {
+    .Bilateralmargin;
+    margin-top: 10px;
+    li {
+        background-color: @LightGrey;
+        flex: 1;
+        border-radius: 5px;
+        position: relative;
+        padding: 10px;
+        box-sizing: border-box;
+        h3 {
+            font-size: @Font5;
+        }
+        small {
+            font-size: @Font7;
+            color: @DeepGrey;
+        }
+    }
+    li+li {
+        margin-left: 15px;
+    }
+}
+
+.prefecture-flow2 {
+    li a img {
+        width: 55px;
+        margin-top: 12px;
+    }
+}
+
+.prefecture-flow3 {
+    li img {
+        width: 60px;
+    }
+}
+
+.prefecture-adv {
+    .Bilateralmargin;
+    margin-top: 15px;
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.prefecture-numbercard {
+    .Bilateralmargin;
+    margin-top: 10px;
+    li {
+        flex: 1;
+    }
+    li+li {
+        margin-left: 15px;
+    }
+}
+
+.prefecture-numbercard-title {
+    position: relative;
+    font-size: @Font5;
+    color: @Warn;
+    a {
+        display: inline-block;
+        width: 44px;
+        height: 15px;
+        text-align: center;
+        line-height: 15px;
+        background-color: @Primary;
+        color: @White;
+        font-size: @Font7;
+        border-radius: 3px;
+        position: absolute;
+        right: 0;
+    }
+}
+
+.prefecture-name h2.prefecture-title1 {
+    width: 60px;
+    height: 46px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    line-height: 16px;
+    border-top-right-radius: 0;
+    padding-top: 5px;
+    margin-left: 15px;
+    margin-top: -10px;
+}
+
+.prefecture-number-list {
+    margin-top: 14px;
+    a {
+        display: block;
+        text-align: center;
+        font-size: @Font5;
+        color: @PrimaryGrey;
+        em {
+            color: #ffab4a;
+            font-weight: normal;
+        }
+    }
+    a+a {
+        margin-top: 13px;
+    }
+}
+
+.cell-flex {
+    display: flex;
+    display: -webkit-flex;
+    align-content: center;
+    align-items: center;
+}
+
+.cell-flex-left {
+    font-size: 13px;
+    flex: 1;
+    h3 {
+        font-size: @Font5;
+        .line-overflow(1);
+    }
+    small {
+        font-size: @Font7;
+        color: @DeepGrey;
+    }
+}
+
+.cell-flex-right {
+    width: 60px;
+    align-self: baseline;
+}
+
+.bg-BlueGrey {
+    background-color: @BlueGrey;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bg-BlueGrey+.bg-BlueGrey {
+    margin-top: 15px;
+}
+
+.prefecture-wuhan {
+    li:first-child {
+        background-color: @LightGrey;
+        border-radius: 5px;
+        position: relative;
+        padding-top: 17px;
+        h3 {
+            font-size: @Font5;
+            padding-left: 15px;
+        }
+        small {
+            font-size: @Font7;
+            color: @DeepGrey;
+            padding-left: 15px;
+        }
+    }
+}
+
+.prefecture-adv2 {
+    position: absolute;
+    width: 100%;
+    right: 10px;
+    bottom: 0;
+    text-align: right;
+    img {
+        width: 82px;
+    }
+}
+
+.prefecture-bargain {
+    margin-top: 10px;
+    .Bilateralmargin;
+    li {
+        flex: 1;
+    }
+    li+li {
+        margin-left: 15px;
+    }
+}
+
+.phone-details {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.phone-pic {
+    text-align: center;
+    img {
+        width: 90%;
+    }
+}
+
+.phone-name {
+    font-size: @Font5;
+    color: @PrimaryGrey;
+    .line-overflow(2);
+}
+
+.phone-price {
+    margin-top: 10px;
+    position: relative;
+    span {
+        color: @Danger;
+        font-size: @Font8;
+        em {
+            font-size: @Font3;
+        }
+    }
+    s {
+        position: absolute;
+        right: 0;
+        top: 7px;
+        color: @DeepGrey;
+        font-size: @Font8;
+    }
+}
+
+.phone-list {
+    .Bilateralmargin;
+    margin-top: 10px;
+    dd {
+        flex: 1;
+    }
+    dd+dd {
+        margin-left: 15px;
+    }
+}
